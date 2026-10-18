@@ -30,6 +30,8 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
     java_sources = sorted((ROOT / "adapters/java").rglob("*.java"))
     java_sources += sorted((ROOT / "examples/java").rglob("*.java"))
+    # Java 8 bytecode is intentional. JDK 21 marks that target as obsolete;
+    # suppress option-age warnings while retaining all code warnings as errors.
     commands = [
         ("public materials", [sys.executable, "tools/check_portfolio.py"]),
         ("Node wrapper syntax", ["node", "--check", "adapters/node/index.js"]),
@@ -37,7 +39,7 @@ def main():
         ("Node contract tests", ["node", "--test", "tests/node-contract.test.cjs"]),
         ("C public header", ["cc", "-std=c99", "-Wall", "-Wextra", "-Werror",
                              "-fsyntax-only", "-Iapi", "tests/header_compile.c"]),
-        ("Java API and example", ["javac", "--release", "8", "-Xlint:all", "-Werror",
+        ("Java API and example", ["javac", "--release", "8", "-Xlint:all,-options", "-Werror",
                                   "-d", ".build/java"] +
                                  [str(path.relative_to(ROOT)) for path in java_sources]),
     ]

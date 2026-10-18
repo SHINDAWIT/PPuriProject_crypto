@@ -1,6 +1,6 @@
 {
   "record_type": "public_contract_checks",
-  "executed_at_utc": "2026-10-18T14:26:31.964815+00:00",
+  "executed_at_utc": "2026-10-18T14:28:34.827293+00:00",
   "status": "PASS",
   "environment": {
     "os": "Ubuntu 24.04.4 LTS",
@@ -66,7 +66,7 @@
         "javac",
         "--release",
         "8",
-        "-Xlint:all",
+        "-Xlint:all,-options",
         "-Werror",
         "-d",
         ".build/java",
