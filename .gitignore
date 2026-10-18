@@ -1,0 +1,18 @@
+# Local compilation output only
+.build/
+__pycache__/
+*.pyc
+node_modules/
+# Original delivery artifacts and private operational data
+*.so
+*.node
+*.jar
+*.tar
+*.tar.gz
+*.zip
+*.eml
+*.msg
+*.xlsx
+*.pem
+.env
+.env.*

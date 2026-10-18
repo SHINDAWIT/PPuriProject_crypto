@@ -1,0 +1,43 @@
+{
+  "project_reference_revision": "26a076605e788d74c917131e9a30ca6504ab8aa2",
+  "release_source_revision": "fce89ed21201f454896b8c01016f741a845a221d",
+  "selection": "public C interface and minimal language adapters only",
+  "files": [
+    {
+      "source_path": "include/apc/aria_payload_crypto.h",
+      "public_path": "api/aria_payload_crypto.h",
+      "sha256": "679dbeb4b312c9ebb2199e3447f0548ea675c580e62dda14216f56984b2fbb9c",
+      "transformation": "verbatim"
+    },
+    {
+      "source_path": "bindings/node/index.js",
+      "public_path": "adapters/node/index.js",
+      "sha256": "7a43ab2b4659384ce1c49aa016479cef004c84fcdd6e4458895d72a94c044768",
+      "transformation": "verbatim"
+    },
+    {
+      "source_path": "bindings/node/index.d.ts",
+      "public_path": "adapters/node/index.d.ts",
+      "sha256": "cfb398ebd547af374f0ef4c3dc961a27e61fcf26d021beacbc0388fd2d82a4c6",
+      "transformation": "verbatim"
+    },
+    {
+      "source_path": "bindings/java/src/aria/payload/crypto/CryptoNative.java",
+      "public_path": "adapters/java/aria/payload/crypto/CryptoNative.java",
+      "sha256": "b4c58169fff3dadcaef366758775b747aadcecc3e0501e7c4a6a7894080d286f",
+      "transformation": "verbatim"
+    },
+    {
+      "source_path": "bindings/java/src/aria/payload/crypto/CryptoContext.java",
+      "public_path": "adapters/java/aria/payload/crypto/CryptoContext.java",
+      "sha256": "c67ae70d8173b3b44524f8366c045635f228a9e5b8f885ac3c62ee1cbaa5f2b2",
+      "transformation": "verbatim"
+    },
+    {
+      "source_path": "bindings/java/src/aria/payload/crypto/CryptoProfile.java",
+      "public_path": "adapters/java/aria/payload/crypto/CryptoProfile.java",
+      "sha256": "7c3e52cc063d94c1283225379f41086be30e2a8b8c70356ebdba7a3e7023b7b9",
+      "transformation": "verbatim"
+    }
+  ]
+}

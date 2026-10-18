@@ -1,0 +1,96 @@
+{
+  "record_type": "summary_of_existing_release_document",
+  "release_filename": "aria-payload-crypto-0.1.0-linux-amd64.tar.gz",
+  "archive_sha256": "724858c79d87d405e338df2cfab6a5550fe21f30d53bb07b0a7a3372bbd6d0ad",
+  "source_revision": "fce89ed21201f454896b8c01016f741a845a221d",
+  "recorded_at_utc": "2026-08-12T02:37:11Z",
+  "edge": {
+    "image": "nodered/node-red:4.0.5",
+    "platform": "Alpine 3.20.3/musl 1.2.5",
+    "node": "20.18.0",
+    "napi": "9"
+  },
+  "bridge": {
+    "platform": "Ubuntu 22.04.5/glibc 2.35",
+    "java_runtime": "21.0.11",
+    "java_bytecode_release": "8"
+  },
+  "checks": [
+    {
+      "description": "고정 Node-RED 4.0.5 linux/amd64 이미지에서 native/Node addon 로딩",
+      "reported_status": "PASS",
+      "report_line": 15
+    },
+    {
+      "description": "CBC 1~6 및 CTR 11~16 암복호화",
+      "reported_status": "PASS",
+      "report_line": 16
+    },
+    {
+      "description": "profile 7~10 context 생성 거부",
+      "reported_status": "PASS",
+      "report_line": 17
+    },
+    {
+      "description": "MAC/암호문 변조 거부 및 평문 미생성",
+      "reported_status": "PASS",
+      "report_line": 18
+    },
+    {
+      "description": "0바이트 및 129바이트 `keyId` context 생성 거부",
+      "reported_status": "PASS",
+      "report_line": 19
+    },
+    {
+      "description": "`context.close()` 이후 native context 재사용 거부",
+      "reported_status": "PASS",
+      "report_line": 20
+    },
+    {
+      "description": "Ubuntu 22.04.5, glibc 2.35, Java 21에서 native/JNI/JAR 로딩",
+      "reported_status": "PASS",
+      "report_line": 24
+    },
+    {
+      "description": "CBC 1~6 및 CTR 11~16 암복호화",
+      "reported_status": "PASS",
+      "report_line": 25
+    },
+    {
+      "description": "profile 7~10 context 생성 거부",
+      "reported_status": "PASS",
+      "report_line": 26
+    },
+    {
+      "description": "0바이트 및 129바이트 `keyId` context 생성 거부",
+      "reported_status": "PASS",
+      "report_line": 27
+    },
+    {
+      "description": "`context.close()` 이후 native context 재사용 거부",
+      "reported_status": "PASS",
+      "report_line": 28
+    },
+    {
+      "description": "Edge 암호문과 Java Bridge 상호운용",
+      "reported_status": "PASS",
+      "report_line": 29
+    },
+    {
+      "description": "CBC 및 CTR binary Envelope produce/consume/decrypt",
+      "reported_status": "PASS",
+      "report_line": 33
+    },
+    {
+      "description": "복호화 성공 후 consumer offset 처리",
+      "reported_status": "PASS",
+      "report_line": 34
+    }
+  ],
+  "summary_generated_by_packaging_template": true,
+  "raw_execution_logs_independently_verified": false,
+  "cryptographic_tests_rerun_for_portfolio": false,
+  "node_red_flow_deployment_proven": false,
+  "customer_acceptance_proven": false,
+  "email_receipt_matched_to_archive_hash": false
+}

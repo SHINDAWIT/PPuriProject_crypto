@@ -1,0 +1,13 @@
+{
+  "name": "ppuri-crypto-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Selected interfaces and contract checks for a research project portfolio",
+  "scripts": {
+    "test": "node --test tests/node-contract.test.cjs",
+    "check": "python3 tools/run_checks.py"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

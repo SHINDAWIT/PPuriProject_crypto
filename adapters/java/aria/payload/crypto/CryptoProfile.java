@@ -1,0 +1,2 @@
+package aria.payload.crypto;
+public enum CryptoProfile { ARIA_128_CBC_HMAC_SHA_256(1),ARIA_128_CBC_HMAC_SHA_512(2),ARIA_192_CBC_HMAC_SHA_256(3),ARIA_192_CBC_HMAC_SHA_512(4),ARIA_256_CBC_HMAC_SHA_256(5),ARIA_256_CBC_HMAC_SHA_512(6),ARIA_128_CTR_HMAC_SHA_256(11),ARIA_128_CTR_HMAC_SHA_512(12),ARIA_192_CTR_HMAC_SHA_256(13),ARIA_192_CTR_HMAC_SHA_512(14),ARIA_256_CTR_HMAC_SHA_256(15),ARIA_256_CTR_HMAC_SHA_512(16); final int id; CryptoProfile(int i){id=i;} public int id(){return id;} public boolean isCtr(){return id>=11;} }

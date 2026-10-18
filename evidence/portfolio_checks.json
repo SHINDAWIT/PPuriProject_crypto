@@ -1,0 +1,86 @@
+{
+  "record_type": "public_contract_checks",
+  "executed_at_utc": "2026-10-18T14:26:31.964815+00:00",
+  "status": "PASS",
+  "environment": {
+    "os": "Ubuntu 24.04.4 LTS",
+    "architecture": "x86_64",
+    "python": "3.12.3",
+    "node": "v22.23.0",
+    "javac": "javac 17.0.20.1",
+    "cc": "cc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+  },
+  "checks": [
+    {
+      "name": "public materials",
+      "command": [
+        "python3",
+        "tools/check_portfolio.py"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Node wrapper syntax",
+      "command": [
+        "node",
+        "--check",
+        "adapters/node/index.js"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Node example syntax",
+      "command": [
+        "node",
+        "--check",
+        "examples/node/encrypt-payload.cjs"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Node contract tests",
+      "command": [
+        "node",
+        "--test",
+        "tests/node-contract.test.cjs"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "C public header",
+      "command": [
+        "cc",
+        "-std=c99",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-fsyntax-only",
+        "-Iapi",
+        "tests/header_compile.c"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Java API and example",
+      "command": [
+        "javac",
+        "--release",
+        "8",
+        "-Xlint:all",
+        "-Werror",
+        "-d",
+        ".build/java",
+        "adapters/java/aria/payload/crypto/CryptoContext.java",
+        "adapters/java/aria/payload/crypto/CryptoNative.java",
+        "adapters/java/aria/payload/crypto/CryptoProfile.java",
+        "examples/java/DecryptEnvelope.java"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "node_contract_scenarios": 8,
+  "native_cryptography_executed": false,
+  "target_container_tests_executed": false,
+  "kafka_or_customer_system_contacted": false,
+  "scope": "Public adapter contracts, syntax, compilation, documentation and file selection only"
+}
